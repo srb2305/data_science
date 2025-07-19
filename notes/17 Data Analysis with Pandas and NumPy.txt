@@ -1,0 +1,40 @@
+Data Analysis with Pandas and NumPy
+
+Overview
+Pandas and NumPy are popular Python libraries used for data analysis. Pandas provides data structures and functions for efficiently handling structured data, while NumPy offers support for large, multi-dimensional arrays and matrices.
+
+Key Features
+Pandas
+1. DataFrames: Two-dimensional labeled data structure for storing and manipulating data.
+2. Series: One-dimensional labeled array for storing and manipulating data.
+3. Data manipulation: Functions for filtering, sorting, grouping, and merging data.
+
+NumPy
+1. Arrays: Multi-dimensional arrays for storing and manipulating numerical data.
+2. Mathematical operations: Functions for performing element-wise mathematical operations.
+3. Linear algebra: Functions for performing linear algebra operations.
+
+Use Cases
+1. Data cleaning and preprocessing: Use Pandas to handle missing values, data inconsistencies, and data transformation.
+2. Data analysis: Use Pandas and NumPy to perform data analysis, including filtering, grouping, and aggregating data.
+3. Data visualization: Use Pandas and NumPy to prepare data for visualization with libraries like Matplotlib and Seaborn.
+
+Example
+
+import pandas as pd
+import numpy as np
+
+# Create a DataFrame
+data = {'Name': ['John', 'Mary', 'David'], 'Age': [25, 31, 42]}
+df = pd.DataFrame(data)
+
+# Calculate mean age
+mean_age = df['Age'].mean()
+print(mean_age)
+
+# Create a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+print(arr.mean())
+
+
+By leveraging Pandas and NumPy, you can efficiently analyze and manipulate data in Python.

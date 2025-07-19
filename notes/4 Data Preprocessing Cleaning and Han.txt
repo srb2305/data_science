@@ -1,0 +1,53 @@
+Data Preprocessing: Cleaning and Handling Missing Data
+
+Overview
+Data preprocessing is a crucial step in data analysis and machine learning. It involves cleaning and transforming raw data into a format that can be used for analysis or modeling.
+
+Steps
+1. Handling Missing Data:
+    - Drop rows or columns: If there are too many missing values, it might be best to drop the rows or columns.
+    - Fill with mean/median/mode: For numerical data, missing values can be filled with the mean or median. For categorical data, missing values can be filled with the mode.
+    - Imputation: More complex imputation methods can be used, such as regression imputation or interpolation.
+2. Data Cleaning:
+    - Remove duplicates: Remove duplicate rows to prevent data redundancy.
+    - Handle outliers: Identify and handle outliers, which can be errors in data collection or unusual values.
+    - Data normalization: Scale numerical data to a common range to prevent differences in scales.
+3. Data Transformation:
+    - Encoding categorical variables: Convert categorical variables into numerical variables using techniques like one-hot encoding or label encoding.
+    - Feature scaling: Scale numerical data to a common range.
+
+Example Code
+
+import pandas as pd
+import numpy as np
+
+# Create a sample DataFrame
+data = {
+    'A': [1, 2, np.nan, 4, 5],
+    'B': [np.nan, 2, 3, 4, 5],
+    'C': ['cat', 'dog', 'cat', 'bird', 'dog']
+}
+df = pd.DataFrame(data)
+
+# Drop rows with missing values
+df_dropped = df.dropna()
+
+# Fill missing values with mean
+df_filled = df.copy()
+df_filled['A'] = df_filled['A'].fillna(df['A'].mean())
+df_filled['B'] = df_filled['B'].fillna(df['B'].mean())
+
+# One-hot encoding for categorical variables
+df_encoded = pd.get_dummies(df, columns=['C'])
+
+print("Original DataFrame:")
+print(df)
+print("\nDataFrame with dropped rows:")
+print(df_dropped)
+print("\nDataFrame with filled missing values:")
+print(df_filled)
+print("\nDataFrame with one-hot encoding:")
+print(df_encoded)
+
+
+This code demonstrates how to handle missing data, drop rows or columns, fill missing values, and perform one-hot encoding for categorical variables.

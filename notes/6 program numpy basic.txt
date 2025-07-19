@@ -1,0 +1,14 @@
+import numpy as np
+
+# Create a sample array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform basic operations
+print("Sum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Standard Deviation:", np.std(arr))
+
+# Create a 2D array
+arr_2d = np.array([[1, 2], [3, 4]])
+print("Matrix Multiplication:")
+print(np.matmul(arr_2d, arr_2d))

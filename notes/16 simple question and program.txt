@@ -1,0 +1,12 @@
+Overview
+A company wants to analyze its sales data to identify trends and patterns. They have a dataset containing sales figures for different products across various regions.
+
+Dataset
+| Product | Region | Sales |
+| --- | --- | --- |
+| A | North | 100 |
+| A | South | 150 |
+| B | North | 200 |
+| B | South | 250 |
+| C | North | 300 |
+| C | South | 350 |

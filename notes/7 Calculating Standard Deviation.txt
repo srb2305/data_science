@@ -1,0 +1,48 @@
+Calculating Standard Deviation
+
+Overview
+Standard deviation is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean, while a high standard deviation indicates that the values are spread out over a wider range.
+
+Formula
+The standard deviation is calculated using the following formula:
+
+
+std = sqrt(sum((x - mean)^2) / (n - 1))
+
+
+Where:
+
+- x is each individual value
+- mean is the mean of the values
+- n is the number of values
+
+Example Code
+
+import numpy as np
+
+# Create a sample dataset
+data = [1, 2, 3, 4, 5]
+
+# Calculate the standard deviation using NumPy
+std = np.std(data)
+
+print("Standard Deviation:", std)
+
+
+This code calculates the standard deviation of a sample dataset using the np.std() function from the NumPy library.
+
+Pandas Example
+
+import pandas as pd
+
+# Create a sample DataFrame
+data = {'Values': [1, 2, 3, 4, 5]}
+df = pd.DataFrame(data)
+
+# Calculate the standard deviation using Pandas
+std = df['Values'].std()
+
+print("Standard Deviation:", std)
+
+
+This code calculates the standard deviation of a column in a Pandas DataFrame using the std() method.

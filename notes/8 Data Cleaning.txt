@@ -1,0 +1,46 @@
+Data Cleaning
+
+Overview
+Data cleaning is the process of identifying and correcting errors, inconsistencies, and inaccuracies in a dataset. It's a crucial step in data analysis and machine learning to ensure that the data is reliable, accurate, and consistent.
+
+Steps
+1. Handling Missing Values: Identify and fill missing values using techniques like mean, median, or imputation.
+2. Data Normalization: Scale numeric data to a common range to prevent differences in scales.
+3. Removing Duplicates: Identify and remove duplicate rows to prevent data redundancy.
+4. Handling Outliers: Identify and handle outliers, which can be errors in data collection or unusual values.
+5. Data Transformation: Convert data types, handle categorical variables, and perform feature scaling.
+
+Techniques
+1. Data Profiling: Analyze data distribution, summary statistics, and data quality.
+2. Data Validation: Check data against rules, constraints, and business logic.
+3. Data Standardization: Standardize data formats, units, and encoding.
+
+Tools
+1. Pandas: A popular Python library for data manipulation and analysis.
+2. NumPy: A library for efficient numerical computation.
+3. Data Cleaning Libraries: Libraries like pandas and Great Expectations provide built-in functions for data cleaning.
+
+Example Code
+
+import pandas as pd
+import numpy as np
+
+# Create a sample DataFrame
+data = {
+    'Name': ['John', 'Anna', np.nan, 'Linda'],
+    'Age': [28, 24, 35, np.nan]
+}
+df = pd.DataFrame(data)
+
+# Handle missing values
+df['Name'] = df['Name'].fillna('Unknown')
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+
+# Remove duplicates
+df = df.drop_duplicates()
+
+print("Cleaned DataFrame:")
+print(df)
+
+
+This code demonstrates basic data cleaning techniques using Pandas, including handling missing values and removing duplicates.

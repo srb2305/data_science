@@ -1,0 +1,61 @@
+Data Preprocessing: Normalization and Feature Scaling
+
+Overview
+Data preprocessing is an essential step in machine learning pipelines. Normalization and feature scaling are techniques used to transform data into a suitable format for modeling.
+
+Normalization
+Normalization typically refers to scaling numeric data to a common range, usually between 0 and 1, to prevent features with large ranges from dominating the model.
+
+Example Code (Min-Max Scaling)
+
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+
+# Sample data
+data = {'Feature1': [1, 2, 3, 4, 5],
+        'Feature2': [10, 20, 30, 40, 50]}
+df = pd.DataFrame(data)
+
+# Apply Min-Max Scaler
+scaler = MinMaxScaler()
+normalized_data = scaler.fit_transform(df)
+
+# Convert back to DataFrame
+normalized_df = pd.DataFrame(normalized_data, columns=df.columns)
+
+print(normalized_df)
+
+
+Feature Scaling
+Feature scaling is a broader term that encompasses various techniques to standardize the range of features.
+
+Example Code (Standardization)
+
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Sample data
+data = {'Feature1': [1, 2, 3, 4, 5],
+        'Feature2': [10, 20, 30, 40, 50]}
+df = pd.DataFrame(data)
+
+# Apply Standard Scaler
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(df)
+
+# Convert back to DataFrame
+scaled_df = pd.DataFrame(scaled_data, columns=df.columns)
+
+print(scaled_df)
+
+
+Why Normalize/Scale Features?
+1. Improved Model Performance: Many machine learning algorithms perform better when features are on the same scale.
+2. Preventing Feature Dominance: Features with large ranges can dominate the model, leading to biased results.
+3. Faster Convergence: Gradient-based algorithms converge faster when features are scaled.
+
+When to Use Each Technique?
+1. Min-Max Scaling: Suitable when you need to scale features to a specific range (e.g., 0 to 1).
+2. Standardization: Suitable when you need to scale features to have zero mean and unit variance.
+
+By applying normalization and feature scaling techniques, you can improve the performance and robustness of your machine learning models.

@@ -1,0 +1,47 @@
+MinMaxScaler Example
+
+Overview
+MinMaxScaler is a technique used to scale numeric data to a common range, usually between 0 and 1.
+
+Example Code
+
+from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
+
+# Sample data
+data = {'Feature1': [10, 20, 30, 40, 50],
+        'Feature2': [100, 200, 300, 400, 500]}
+df = pd.DataFrame(data)
+
+# Create a MinMaxScaler object
+scaler = MinMaxScaler()
+
+# Fit and transform the data
+scaled_data = scaler.fit_transform(df)
+
+# Convert back to DataFrame
+scaled_df = pd.DataFrame(scaled_data, columns=df.columns)
+
+print("Original Data:")
+print(df)
+print("\nScaled Data:")
+print(scaled_df)
+
+
+How it Works
+1. MinMaxScaler calculates the minimum and maximum values for each feature.
+2. It then scales the data using the formula: (x - min) / (max - min)
+3. The scaled data is then returned.
+
+Benefits
+1. Prevents feature dominance: Features with large ranges no longer dominate the model.
+2. Improves model performance: Many machine learning algorithms perform better with scaled data.
+
+Parameters
+1. feature_range: The range to which the data should be scaled. Default is (0, 1).
+
+Use Cases
+1. Neural Networks: Scaling data can improve the performance of neural networks.
+2. Distance-based algorithms: Scaling data can improve the performance of distance-based algorithms like KNN.
+
+By using MinMaxScaler, you can scale your data to a common range and improve the performance of your machine learning models.

@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Initial stock price
+stock_price = 100
+
+# Number of trading days
+days = 100
+
+# Generate daily returns
+returns = np.random.randn(days)
+
+# Calculate stock prices
+stock_prices = stock_price * np.cumprod(1 + returns/100)
+
+# Plot stock prices
+plt.plot(stock_prices)
+plt.title('Simulated Stock Prices')
+plt.show()

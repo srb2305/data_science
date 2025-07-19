@@ -1,0 +1,29 @@
+Data Types:
+
+1. Quantitative Data: Numerical data that can be measured and analyzed mathematically.
+    - Examples: Age, Height, Weight, Temperature
+2. Qualitative Data: Non-numerical data that describes characteristics or attributes.
+    - Examples: Color, Gender, Occupation, Opinion
+3. Categorical Data: Data that can be grouped into categories or classes.
+    - Examples: Product categories, Customer segments, Industry types
+4. Text Data: Unstructured data in the form of text, such as documents, emails, or social media posts.
+5. Time Series Data: Data that is collected over time, such as stock prices, weather data, or sensor readings.
+
+Data Sources:
+
+1. Primary Data: Data collected directly from the source, such as surveys, experiments, or observations.
+2. Secondary Data: Data collected from existing sources, such as databases, reports, or publications.
+3. Internal Data: Data generated within an organization, such as customer data, sales data, or financial data.
+4. External Data: Data collected from outside an organization, such as market research, social media, or public datasets.
+5. Big Data: Large, complex datasets that require specialized tools and techniques to process and analyze.
+
+Examples of Data Sources:
+
+1. Databases: Relational databases, NoSQL databases, or cloud-based databases.
+2. APIs: Application Programming Interfaces that provide access to data from external sources.
+3. Files: CSV, Excel, JSON, or other file formats that contain data.
+4. Web Scraping: Extracting data from websites using web scraping techniques.
+5. Sensors and IoT Devices: Collecting data from sensors, cameras, or other IoT devices.
+6. Social Media: Collecting data from social media platforms, such as Twitter, Facebook, or Instagram.
+7. Government Databases: Public datasets and statistics from government agencies.
+8. Market Research Reports: Reports and studies from market research firms.

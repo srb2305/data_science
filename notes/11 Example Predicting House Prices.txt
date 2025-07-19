@@ -1,0 +1,41 @@
+Example: Predicting House Prices
+Suppose you're a data scientist working on a project to predict house prices based on features like number of bedrooms, square footage, and location.
+
+Raw Data
+| Feature | Description | Range |
+| --- | --- | --- |
+| Bedrooms | Number of bedrooms | 1-10 |
+| Sqft | Square footage | 500-5000 |
+| Location | Location of the house | (varies) |
+
+
+Problem
+The features have different scales, which can affect the performance of the model. For example:
+
+- The range of Sqft is much larger than the range of Bedrooms.
+- The Location feature is categorical and needs to be encoded.
+
+Solution
+Apply data preprocessing techniques:
+
+1. Scaling: Use Min-Max Scaler or Standard Scaler to scale the numerical features (Bedrooms and Sqft).
+2. Encoding: Use Label Encoder or One-Hot Encoder to encode the categorical feature (Location).
+
+from sklearn.preprocessing import MinMaxScaler, LabelEncoder
+import pandas as pd
+
+# Sample data
+data = {'Bedrooms': [2, 3, 4, 5],
+        'Sqft': [1000, 1500, 2000, 2500],
+        'Location': ['City', 'Suburbs', 'City', 'Rural']}
+df = pd.DataFrame(data)
+
+# Scaling
+scaler = MinMaxScaler()
+df[['Bedrooms', 'Sqft']] = scaler.fit_transform(df[['Bedrooms', 'Sqft']])
+
+# Encoding
+le = LabelEncoder()
+df['Location'] = le.fit_transform(df['Location'])
+
+print(df)
